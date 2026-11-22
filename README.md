@@ -1,56 +1,72 @@
-# Welcome to your Expo app 👋
+🍦 Sorvete e Gelado
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicativo mobile de delivery de sorvetes, desenvolvido com React Native e Expo.
 
-## Get started
+📖 Descrição
 
-1. Install dependencies
+O Sorvete e Gelado é um aplicativo de pedidos para uma sorveteria. O usuário faz login, navega pelos sorvetes, filtra por categoria (Casquinha, Cascão e Sunday), pesquisa pelo nome, monta o carrinho e finaliza a compra. Há também uma oferta especial (Sorvete + Cobertura) disponível no botão Peça Agora!!!.
 
-   ```bash
-   npm install
-   ```
+🎯 Objetivo
 
-2. Start the app
+Facilitar o pedido de sorvetes pelo celular, oferecendo uma forma simples e rápida de escolher os produtos, acompanhar a quantidade de itens e o valor total e concluir a compra sem filas nem anotações em papel.
 
-   ```bash
-   npx expo start
-   ```
+🛠️ Tecnologias utilizadas
+React Native
+Expo (com Expo Router)
+TypeScript
+NativeWind (Tailwind CSS para React Native)
+Git
+GitHub
 
-In the output, you'll find options to open the app in a
+✅ Funcionalidades
+✓ Tela de login com nome e senha
+✓ Visualização de produtos (sorvetes em destaque)
+✓ Filtro por categoria: Casquinha, Cascão e Sunday
+✓ Barra de pesquisa por nome do sorvete
+✓ Adição de produtos ao carrinho
+✓ Remoção de produtos do carrinho
+✓ Contagem de itens no carrinho
+✓ Cálculo do valor total
+✓ Finalização da compra com confirmação
+✓ Oferta especial no botão "Peça Agora!!!"
+✓ Logout (Sair)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Observação: o login é de demonstração. Ele valida apenas o preenchimento do nome e o tamanho mínimo da senha (4 caracteres), sem cadastro nem servidor. Os dados ficam apenas na memória e são perdidos ao fechar o app.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+📁 Estrutura do projeto
+src/
+├── app/                 # Telas e rotas (Expo Router)
+│   ├── _layout.tsx      # Layout principal: decide entre login e abas
+│   ├── index.tsx        # Tela inicial: busca, categorias, produtos e carrinho
+│   └── explore.tsx      # Segunda aba do app
+├── components/          # Componentes reutilizáveis
+│   ├── IceCards.tsx     # Card de um sorvete
+│   └── LoginScreen.tsx  # Tela de login
+├── constants/
+│   └── icecream.ts      # Lista de produtos, categorias e item especial
+├── context/
+│   └── AppContext.tsx   # Estado global: usuário logado e carrinho
+├── hooks/               # Hooks do projeto
+└── global.css           # Estilos globais do NativeWind
 
-## Get a fresh project
+▶️ Como executar
 
-When you're ready, run:
+Clone o repositório e entre na pasta do projeto:
+bash
+git clone https://github.com/gomescezar-eng/Sorvete_e_Gelado_Final.git
+cd Sorvete_e_Gelado_Final
 
-```bash
-npm run reset-project
-```
+Instale as dependências:
+bash
+npm install
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Inicie o app:
+bash
+npx expo start
 
-### Other setup steps
+Abra o aplicativo:
+No celular, com o app Expo Go, lendo o QR Code exibido no terminal;
+Ou em um emulador Android / simulador iOS, seguindo as opções mostradas no terminal.
+👨‍💻 Desenvolvedor
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Emanuel Cezar Gomes de Souza
